@@ -3,3 +3,38 @@
 /* Note: an asteroid image is included in this repo. 
 Feel free to use it if you like. */
 
+.scoreboard {
+	margin-bottom:20px;
+}
+.enemy {
+	position:relative;
+	background-color:black;
+	width: 16px;
+	height: 16px;
+	top: 20px;
+	border-radius: 8px;
+}
+
+#board {
+	background-color: red;
+	width:700px;
+	height:470px;
+}
+
+.container {
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:40px;
+	margin-bottom:40px;
+
+	padding:40px;
+	width:700px;
+	height:550px;
+
+	background-color:white;
+}
+
+body {
+	background-color: black;
+}
