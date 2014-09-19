@@ -4,19 +4,66 @@
 Feel free to use it if you like. */
 
 .scoreboard {
-	margin-bottom:20px;
+	right:0;
+	position:relative;
+	display: inline-block;
+	width:186px;
+	height:50px;
+	background-color: gray;
+	text-align: right;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	border-radius: 3px;
 }
+
+.high, .current{
+	font-family: Arial;
+	font-size: 1.2em;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+
+.titleText {
+	display: inline-block;
+	width:500px;
+	height:50px;
+	vertical-align: bottom;
+	text-align: center;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+.titleText h2 {
+	display: table-cell;
+	margin-left:auto;
+	margin-right:auto;
+	width:200px;
+	height:50px;
+	vertical-align: middle;
+}
+
 .enemy {
 	position:relative;
+	/*
 	background-color:black;
 	width: 16px;
 	height: 16px;
 	top: 20px;
 	border-radius: 8px;
+	*/
+}
+
+.player {
+	position:relative;
+	/*
+	width: 16px;
+	height: 16px;
+	top: 20px;
+	border-radius: 8px;*/
 }
 
 #board {
-	background-color: red;
 	width:700px;
 	height:470px;
 }
@@ -33,8 +80,50 @@ Feel free to use it if you like. */
 	height:550px;
 
 	background-color:white;
+
 }
 
 body {
 	background-color: black;
+}
+
+.pulse{
+	animation-name: pulse;
+	-webkit-animation-name: pulse;	
+
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.9);
+		opacity: 0.7;		
+	}
+	50% {
+		transform: scale(1);
+		opacity: 1;	
+	}	
+	100% {
+		transform: scale(0.9);
+		opacity: 0.7;	
+	}			
+}
+
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-transform: scale(0.95);
+		opacity: 0.7;		
+	}
+	50% {
+		-webkit-transform: scale(1);
+		opacity: 1;	
+	}	
+	100% {
+		-webkit-transform: scale(0.95);
+		opacity: 0.7;	
+	}			
 }
